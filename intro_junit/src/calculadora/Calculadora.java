@@ -5,6 +5,7 @@ public class Calculadora {
 
 	
 	/**
+	 * teste
 	 * Este método soma dois inteiros e retorna o resultado
 	 * 
 	 * @param a
