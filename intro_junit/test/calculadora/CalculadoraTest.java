@@ -13,7 +13,7 @@ import org.junit.jupiter.api.Test;
 import calculadora.Calculadora;
 
 
-@DisplayName("Classe para teste da calculadora")
+@DisplayName("Teste calculadora")
 public class CalculadoraTest {
 	
 	private Calculadora calc;
@@ -23,30 +23,63 @@ public class CalculadoraTest {
 		calc = new Calculadora();
 	}
 	
-	@DisplayName("Testa a soma de dois números")
+	@DisplayName("Teste Soma")
 	@Test
 	public void testSomaDoisNumeros() {
 		int soma = calc.soma(10, 5);		
 		Assertions.assertEquals(15, soma);		
 	}
 	
+	@DisplayName("Teste Subtração")
 	@Test
 	public void testSubtraiDoisNumeros() {
 		int subtracao = calc.subtracao(10,5);
 		Assertions.assertEquals(5, subtracao);
 	}
 	
+	@DisplayName("Teste Subtração Resultado Negativo")
 	@Test
 	public void testSubtraiDoisNumerosNegativo() {
 		int subtracao = calc.subtracao(5,10);
 		Assertions.assertEquals(-5, subtracao);
 	}
+	
+	@DisplayName("Teste Multiplicacao")
+	@Test
+	public void testMultiplicacaoDoisNumeros() {
+		int multiplicacao = calc.multiplicacao(5,10);
+		Assertions.assertEquals(50, multiplicacao);
+	}
+	
+	@DisplayName("Teste Multiplicacao por Zero")
+	@Test
+	public void testMultiplicacaoPorZero() {
+		int multiplicacao = calc.multiplicacao(5,0);
+		Assertions.assertEquals(0, multiplicacao);
+	}
+
+	@DisplayName("Teste Multiplicacao 1 Negativo")
+	@Test
+	public void testMultiplicacaoUmNegativo() {
+		int multiplicacao = calc.multiplicacao(5,-10);
+		Assertions.assertEquals(-50, multiplicacao);
+	}
+	
+	@DisplayName("Teste Multiplicacao 2 Negativos")
+	@Test
+	public void testMultiplicacaoDoisNegativo() {
+		int multiplicacao = calc.multiplicacao(-5,-10);
+		Assertions.assertEquals(50, multiplicacao);
+	}
+	
+	@DisplayName("Teste divisao")
 	@Test
 	public void testDivisaoDoisNumeros() {
 		int divisao = calc.divisao(8, 4);
 		assertTrue(divisao == 2);
 	}
 	
+	@DisplayName("Teste divisao por Zero")
 	@Test
 	public void testDivisaoPorZero() {
 		try {
@@ -57,6 +90,7 @@ public class CalculadoraTest {
 		}		
 	}
 	
+	@DisplayName("Teste divisao Exception")
 	@Test
 	public void testDivisaoPorZeroComAssertThrows() {
 		assertThrows(ArithmeticException.class,
