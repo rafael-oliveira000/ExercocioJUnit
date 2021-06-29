@@ -30,7 +30,17 @@ public class CalculadoraTest {
 		Assertions.assertEquals(15, soma);		
 	}
 	
+	@Test
+	public void testSubtraiDoisNumeros() {
+		int subtracao = calc.subtracao(10,5);
+		Assertions.assertEquals(5, subtracao);
+	}
 	
+	@Test
+	public void testSubtraiDoisNumerosNegativo() {
+		int subtracao = calc.subtracao(5,10);
+		Assertions.assertEquals(-5, subtracao);
+	}
 	@Test
 	public void testDivisaoDoisNumeros() {
 		int divisao = calc.divisao(8, 4);
