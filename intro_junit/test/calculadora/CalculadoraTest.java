@@ -1,6 +1,5 @@
 package calculadora;
 
-
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertThrows;
 import static org.junit.jupiter.api.Assertions.assertTrue;
@@ -10,6 +9,9 @@ import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
+
+import calculadora.Calculadora;
+
 
 @DisplayName("Classe para teste da calculadora")
 public class CalculadoraTest {
@@ -24,9 +26,10 @@ public class CalculadoraTest {
 	@DisplayName("Testa a soma de dois números")
 	@Test
 	public void testSomaDoisNumeros() {
-		int soma = calc.soma(4, 5);		
-		Assertions.assertEquals(9, soma);		
+		int soma = calc.soma(10, 5);		
+		Assertions.assertEquals(15, soma);		
 	}
+	
 	
 	@Test
 	public void testDivisaoDoisNumeros() {
