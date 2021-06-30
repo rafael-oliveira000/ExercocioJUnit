@@ -96,5 +96,12 @@ public class CalculadoraTest {
 		assertThrows(ArithmeticException.class,
 				() -> calc.divisao(8, 0));
 	}
+	
+	@DisplayName("Teste Somatorio")
+	@Test
+	public void testSomatorio() {
+		int somatorio = calc.somatorio(5);
+		Assertions.assertEquals(15, somatorio);
+	}
 
 }

@@ -59,7 +59,7 @@ public class Calculadora {
 	 * @param n	  		
 	 * @return O retorno será o somatório de 0 até n
 	 */
-	public int somatoria(int n) {
+	public int somatorio(int n) {
 		int somatorio = 0;
 		while (n >= 0) {
 			somatorio += n;
