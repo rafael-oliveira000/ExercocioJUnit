@@ -104,4 +104,17 @@ public class CalculadoraTest {
 		Assertions.assertEquals(15, somatorio);
 	}
 
+	@DisplayName("Teste ehPositivo")
+	@Test
+	public void testPositivo() {
+		boolean positivo = calc.ehPositivo(5);
+		Assertions.assertTrue(positivo);
+	}
+	
+	@DisplayName("Teste nao ehPositivo")
+	@Test
+	public void testNotPositivo() {
+		boolean positivo = calc.ehPositivo(-5);
+		Assertions.assertTrue(!positivo);
+	}
 }
