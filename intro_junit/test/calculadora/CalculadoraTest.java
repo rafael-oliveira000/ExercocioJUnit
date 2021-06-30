@@ -117,4 +117,25 @@ public class CalculadoraTest {
 		boolean positivo = calc.ehPositivo(-5);
 		Assertions.assertTrue(!positivo);
 	}
+	
+	@DisplayName("Teste Compara Igual")
+	@Test
+	public void testCompara() {
+		int compara = calc.compara(10, 10);
+		Assertions.assertEquals(0, compara);
+	}
+	
+	@DisplayName("Teste Compara Menor")
+	@Test
+	public void testComparaMenor() {
+		int compara = calc.compara(10, 11);
+		Assertions.assertEquals(-1, compara);
+	}
+	
+	@DisplayName("Teste Compara Maior")
+	@Test
+	public void testComparaMaior() {
+		int compara = calc.compara(11, 10);
+		Assertions.assertEquals(1, compara);
+	}
 }
